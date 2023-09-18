@@ -8,8 +8,12 @@ def main():
 	args = parser.parse_args()
 
 	if not args.decimal:
-		hex_input = args.input
-		hex_input_list = hex_input.split(" ")
+		hex_input = args.input.replace(" ", "")
+		if (len(hex_input) % 2 != 0):
+			print("ERROR: Input hex has an odd number of characters. Please use an even number of characters.")
+			sys.exit(1)
+		num_char_in_hex_byte = 2 # each byte in hex is 2 characters wide
+		hex_input_list = [hex_input[i:i+num_char_in_hex_byte] for i in range(0, len(hex_input), num_char_in_hex_byte)]
 		hex_input_list_reversed = hex_input_list.copy()
 		hex_input_list_reversed.reverse()
 
