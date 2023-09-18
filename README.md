@@ -32,7 +32,7 @@ When I do a hexdump of the variable in Java, I get the following hex:
 
 Since we know Java uses big endian, we want to pay attention to the "big endian" line.
 ```
-$ python3 debug.py -i "0F 42 40"
+$ python3 convert.py -i "0F 42 40"
 Little endian decimal unsigned: 4211215
 Big endian decimal unsigned:    1000000 <----
 ```
@@ -46,7 +46,7 @@ When we do a hexdump of the variable in C, we get the following hex:
 
 Since I'm on a system that uses little endian, we want to pay attention to the "little endian" line.
 ```
-$ python3 debug.py -i "40 42 0F"
+$ python3 convert.py -i "40 42 0F"
 Little endian decimal unsigned: 1000000 <-----
 Big endian decimal unsigned:    4211215
 ```
