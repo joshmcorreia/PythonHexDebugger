@@ -13,8 +13,8 @@ def main():
 		hex_input_list_reversed = hex_input_list.copy()
 		hex_input_list_reversed.reverse()
 
-		hex_input_little_endian_string = "".join(hex_input_list)
-		hex_input_big_endian_string = "".join(hex_input_list_reversed)
+		hex_input_little_endian_string = "".join(hex_input_list_reversed)
+		hex_input_big_endian_string = "".join(hex_input_list)
 
 		hex_as_decimal_little_endian = int(hex_input_little_endian_string, 16)
 		hex_as_decimal_big_endian = int(hex_input_big_endian_string, 16)
